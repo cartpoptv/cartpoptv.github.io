@@ -37,13 +37,16 @@
     </ul>
     {{- end}}
   </section>
-{{- with .Video}}
 
-  <p class="video-link">
-    <a href="{{.URL}}">{{.Text}}</a>
-    <span class="video-link-note">No-commentary video</span>
-  </p>
-{{- end}}
+  <div class="review-end">
+  {{- with .Video}}
+    <p class="video-link">
+      <a href="{{.URL}}">{{.Text}}</a>
+      <span class="video-link-note">No-commentary video</span>
+    </p>
+  {{- end}}
+    <a class="to-top" href="#top" aria-label="Back to top" title="Back to top"></a>
+  </div>
 
 </article>
 

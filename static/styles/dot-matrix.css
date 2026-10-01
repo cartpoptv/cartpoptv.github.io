@@ -465,7 +465,7 @@ figcaption { margin-top: 0.7rem; font-size: 0.85em; line-height: 1.45; color: va
   .verdict .rating { --cell: 3px; }
 }
 
-.video-link a::before, .review-pager-prev::before, .review-pager-next::after {
+.video-link a::before, .review-pager-prev::before, .review-pager-next::after, .to-top::before {
   content: ""; flex: none; width: 2.75rem; height: 2.75rem; border-radius: 50%;
   background-color: var(--btn); background-repeat: no-repeat;
   box-shadow: 0 0 0 3px var(--btn-ring), inset 0 2px 0 rgb(255 255 255 / 0.2), inset 0 -3px 0 rgb(0 0 0 / 0.25);
@@ -479,8 +479,12 @@ figcaption { margin-top: 0.7rem; font-size: 0.85em; line-height: 1.45; color: va
   background-image: conic-gradient(from 45deg at 0 50%, var(--btn-ink) 90deg, transparent 0);
   background-position: calc(50% - 0.08rem) 50%; background-size: 0.55rem 1.1rem;
 }
-.video-link a:hover::before, .review-pager a:hover::before, .review-pager a:hover::after { background-color: var(--btn-hi); }
-.video-link a:active::before, .review-pager a:active::before, .review-pager a:active::after { transform: translateY(1px); }
+.to-top::before {
+  background-image: conic-gradient(from 135deg at 50% 0, var(--btn-ink) 90deg, transparent 0);
+  background-position: 50% calc(50% - 0.08rem); background-size: 1.1rem 0.55rem;
+}
+.video-link a:hover::before, .review-pager a:hover::before, .review-pager a:hover::after, .to-top:hover::before { background-color: var(--btn-hi); }
+.video-link a:active::before, .review-pager a:active::before, .review-pager a:active::after, .to-top:active::before { transform: translateY(1px); }
 
 .video-link {
   position: relative; box-sizing: border-box; min-height: 2.75rem; margin-top: 2.5rem; margin-bottom: 0; padding-left: 3.75rem;
@@ -490,6 +494,10 @@ figcaption { margin-top: 0.7rem; font-size: 0.85em; line-height: 1.45; color: va
 .video-link a::before { position: absolute; left: 0; top: calc(50% - 1.375rem); }
 .video-link a:hover { color: var(--accent); }
 .video-link-note { display: block; margin-top: 0.2rem; font-size: 0.85em; color: var(--text-dim); }
+
+.review-end { display: flex; align-items: center; gap: 1.5rem; max-width: var(--measure); margin: 2.5rem auto 0; }
+.review-end .video-link { margin: 0; }
+.to-top { --btn: var(--pro); --btn-hi: #cad969; --btn-ink: #141a06; display: flex; margin-left: auto; border-radius: 50%; }
 
 .comments { margin-top: 4rem; }
 .comments h2 { color: var(--text-dim); }
