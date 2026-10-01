@@ -1,0 +1,18 @@
+{{define "title"}}{{.Title}} - cartpop.tv{{end}}
+
+{{define "body-class"}}page-static{{if eq .Slug "404"}} page-404{{end}}{{end}}
+
+{{define "main" -}}
+<article class="page">
+
+  <header class="page-header">
+    <h1 class="page-title">{{.Title}}</h1>
+  </header>
+
+  <div class="page-body">
+{{.Body}}  </div>
+
+</article>
+{{end}}
+
+{{define "after"}}{{template "lightbox" .}}{{end}}

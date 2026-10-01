@@ -1,4 +1,7 @@
-*.css linguist-vendored
-*.json linguist-vendored
-CMakeLists.txt linguist-vendored
-*.cmake linguist-vendored
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.webp binary
+*.avif binary
+*.ico binary

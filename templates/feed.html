@@ -1,0 +1,16 @@
+{{define "entry" -}}
+<p>{{.Feed.Lead}}</p>
+{{with .Feed.ReviewedOn}}<p>Reviewed on {{.}}</p>
+{{end}}{{.Feed.Hero}}{{.Feed.Body}}<h2>Verdict</h2>
+{{template "feed-rating" (score .Root .Rating)}}
+{{- with .Points}}
+<ul>
+{{- range .}}
+<li>{{if .Pro}}+{{else}}−{{end}} {{.Text}}</li>
+{{- end}}
+</ul>
+{{- end}}
+{{- with .Video}}
+<p><a href="{{.URL}}">{{.Text}}</a></p>
+{{- end}}
+{{end}}

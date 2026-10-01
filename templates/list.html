@@ -1,0 +1,32 @@
+{{define "title"}}{{.Title}}{{end}}
+
+{{define "body-class"}}page-index{{end}}
+
+{{define "main"}}
+  <section class="intro">
+    <h1 class="intro-title">{{.Intro.Title}}</h1>
+{{.Intro.Body}}  </section>
+
+  <nav class="filters" aria-label="Filter reviews">
+    <ul>
+      {{- range .Filters}}
+      <li><a class="label{{with .Platform}} label-{{.ID}}{{end}}{{if .Active}} is-active{{end}}" href="{{$.Root}}{{.File}}" data-title="{{.Title}}"{{if .Active}} aria-current="true"{{end}}>{{.Name}} <span class="label-count">{{.Count}}</span></a></li>
+      {{- end}}
+    </ul>
+  </nav>
+
+  <ol class="review-list">
+{{- range $row := .Rows}}
+
+    <li class="review-item platform-{{.Platform.ID}}"{{if .Hidden}} hidden{{end}}>
+      <time class="review-item-date" datetime="{{.ISODate}}">{{.ISODate}}</time>
+      <h2 class="review-item-title"><a href="{{$.Root}}{{.File}}">{{.Title}}</a></h2>
+      <p class="review-item-labels">
+        {{- range $i, $label := .Labels}}{{if $i}} {{end}}<a class="label{{if eq $i 0}} label-{{$row.Platform.ID}}{{end}}" href="{{$.Root}}{{labelFile $label}}">{{$label}}</a>{{end -}}
+      </p>
+      {{template "rating" (score $.Root .Rating)}}
+    </li>
+{{- end}}
+
+  </ol>
+{{end}}

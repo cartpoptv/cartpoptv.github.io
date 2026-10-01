@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>{{block "title" .}}{{end}}</title>
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="{{.Root}}styles/dot-matrix.css">
+<script>(function(r){var n=getComputedStyle(r).getPropertyValue("--intros").trim().split(/\s+/);if(n[0])r.dataset.intro=n[Math.floor(Math.random()*n.length)]})(document.documentElement)</script>
+<script src="{{.Root}}site.js" defer></script>
+{{- with .Head}}
+{{- with .Description}}
+<meta name="description" content="{{.}}">
+{{- end}}
+{{- with .URL}}
+<link rel="canonical" href="{{.}}">
+{{- end}}
+<link rel="alternate" type="application/atom+xml" title="cartpop.tv" href="{{$.Root}}feed.xml">
+<link rel="icon" href="{{$.Root}}favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="{{$.Root}}apple-touch-icon.png">
+{{- if .URL}}
+<meta property="og:type" content="{{.Type}}">
+<meta property="og:site_name" content="cartpop.tv">
+<meta property="og:title" content="{{template "title" $}}">
+{{- with .Description}}
+<meta property="og:description" content="{{.}}">
+{{- end}}
+<meta property="og:url" content="{{.URL}}">
+<meta property="og:image" content="{{.Image.URL}}">
+<meta property="og:image:width" content="{{.Image.Width}}">
+<meta property="og:image:height" content="{{.Image.Height}}">
+{{- with .Published}}
+<meta property="article:published_time" content="{{.}}">
+{{- end}}
+<meta name="twitter:card" content="{{.Card}}">
+{{- end}}
+{{- if eq .Type "article"}}
+<meta name="giscus:backlink" content="{{.URL}}">
+{{- end}}
+{{- end}}
+</head>
+
+<body class="{{block "body-class" .}}{{end}}">
+
+<a class="skip-link" href="#content">Skip to content</a>
+
+<header class="site-header">
+  <a class="site-logo" href="{{.Root}}index.html">cartpop<span class="site-logo-tld">.tv</span></a>
+  <p class="site-tagline">Cartridge game reviews, without ads</p>
+  <nav class="site-nav" aria-label="Main">
+    <ul>
+      <li><a href="{{.Root}}index.html"{{if eq .Current "index.html"}} aria-current="page"{{end}}>Reviews</a></li>
+      <li><a href="{{.Root}}about.html"{{if eq .Current "about.html"}} aria-current="page"{{end}}>About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="content">
+{{block "main" .}}{{end -}}
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-panel">
+    <p class="site-footer-values">No ads, cookies, or trackers.</p>
+    <ul class="site-footer-links">
+      <li><a href="{{.Root}}feed.xml">RSS</a></li>
+      <li><a href="https://www.instagram.com/cartpoptv/">Instagram</a></li>
+      <li><a href="https://www.youtube.com/@CartPopTV">YouTube</a></li>
+      <li><a href="https://github.com/cartpoptv">GitHub</a></li>
+    </ul>
+    <fieldset class="theme-switch" hidden>
+      <legend>Theme</legend>
+      <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+      <label><input type="radio" name="theme" value="auto" checked><span>Auto</span></label>
+      <label><input type="radio" name="theme" value="light"><span>Light</span></label>
+    </fieldset>
+  </div>
+  <p class="site-footer-address"><span class="site-footer-address-label">ROM backup</span> If the <span class="site-footer-domain">cartpop.tv</span> domain ever stops working, the site is still at <a href="https://cartpoptv.github.io/">cartpoptv.github.io</a>.</p>
+</footer>
+{{- block "after" .}}{{end}}
+
+</body>
+</html>

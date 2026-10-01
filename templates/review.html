@@ -1,0 +1,67 @@
+{{define "title"}}{{.Title}} ({{.Platform.Label}}) - cartpop.tv{{end}}
+
+{{define "body-class"}}page-review platform-{{.Platform.ID}}{{end}}
+
+{{define "main" -}}
+<article class="review">
+
+  <header class="review-header">
+    <p class="review-labels">
+      {{- range $i, $label := .Labels}}
+      <a class="label{{if eq $i 0}} label-platform{{end}}" href="{{$.Root}}{{labelFile $label}}">{{$label}}</a>
+      {{- end}}
+    </p>
+    <h1 class="review-title">{{.Title}}</h1>
+    <p class="review-standfirst">{{.Lead}}</p>
+    <p class="review-meta">
+      <time datetime="{{.ISODate}}">{{.LongDate}}</time>
+      {{- if .ReviewedOn}}
+      <span class="review-meta-sep">·</span>
+      Reviewed on {{.ReviewedOn}}
+      {{- end}}
+    </p>
+  </header>
+{{if .Hero}}
+{{.Hero}}{{end}}
+  <div class="review-body">
+{{.Body}}  </div>
+
+  <section class="verdict" aria-labelledby="verdict-title">
+    <h2 class="verdict-title" id="verdict-title">Verdict</h2>
+    {{template "rating" (score .Root .Rating)}}
+    {{- if .Points}}
+    <ul class="verdict-points">
+      {{- range .Points}}
+      <li class="{{if .Pro}}pro{{else}}con{{end}}">{{.Text}}</li>
+      {{- end}}
+    </ul>
+    {{- end}}
+  </section>
+{{- with .Video}}
+
+  <p class="video-link">
+    <a href="{{.URL}}">{{.Text}}</a>
+    <span class="video-link-note">No-commentary video</span>
+  </p>
+{{- end}}
+
+</article>
+
+<section class="comments" aria-labelledby="comments-title">
+  <h2 id="comments-title">Comments</h2>
+  {{template "giscus"}}
+</section>
+{{- if or .Previous .Next}}
+
+<nav class="review-pager" aria-label="More reviews">
+  {{- with .Previous}}
+  <a class="review-pager-prev" href="{{$.Root}}{{.File}}"><span class="review-pager-dir">Previous</span> {{.Title}}</a>
+  {{- end}}
+  {{- with .Next}}
+  <a class="review-pager-next" href="{{$.Root}}{{.File}}"><span class="review-pager-dir">Next</span> {{.Title}}</a>
+  {{- end}}
+</nav>
+{{- end}}
+{{end}}
+
+{{define "after"}}{{template "lightbox" .}}{{end}}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://cartpoptv.github.io/sitemap.xml

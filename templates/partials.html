@@ -1,0 +1,28 @@
+{{define "tokens"}}{{range .Tokens}}<img class="token" src="{{$.Root}}img/token-{{$.Material}}.png" width="16" height="16" alt="">{{end}}{{end}}
+
+{{define "rating"}}<p class="rating" role="img" aria-label="Rating: {{.Rating}}" title="{{.Rating}}">{{template "tokens" .}}</p>{{end}}
+
+{{define "feed-rating"}}<p>{{range $i, $token := .Tokens}}<img src="{{$.Root}}img/token-{{$.Material}}.png" width="16" height="16" alt="{{if eq $i 0}}Rating: {{$.Rating}}{{end}}">{{end}}</p>{{end}}
+
+{{define "scale-rating"}}<span class="rating" role="img" aria-label="{{printf "%d out of 5" .Rating}}">{{template "tokens" .}}</span>{{end}}
+
+{{define "giscus"}}<div class="giscus"></div>
+  <script src="https://giscus.app/client.js"
+          data-repo="cartpoptv/cartpoptv.github.io"
+          data-repo-id="R_kgDOUgJfMg"
+          data-category="Comments"
+          data-category-id="DIC_kwDOUgJfMs4DGwQn"
+          data-mapping="pathname"
+          data-strict="1"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="https://cartpoptv.github.io/styles/giscus.css"
+          data-lang="en"
+          crossorigin="anonymous"
+          defer>
+  </script>{{end}}
+
+{{define "lightbox"}}{{if .Zoomable}}
+
+<dialog class="lightbox" id="lightbox"><img src="" alt=""></dialog>{{end}}{{end}}
