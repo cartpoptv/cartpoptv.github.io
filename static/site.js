@@ -1,7 +1,7 @@
 (() => {
   const lightbox = document.getElementById("lightbox");
   if (lightbox && lightbox.showModal) {
-    const full = lightbox.querySelector("img");
+    const full = lightbox.appendChild(new Image());
     document.querySelectorAll(".shots img, .photo img").forEach(img => {
       img.classList.add("is-zoomable");
       img.addEventListener("click", () => {
