@@ -37,6 +37,17 @@
 {{- end}}
 {{- if eq .Type "article"}}
 <meta name="giscus:backlink" content="{{.URL}}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "url": {{.URL}},
+  "datePublished": {{.Published}},
+  "author": {"@type": "Organization", "name": "cartpop.tv"},
+  "itemReviewed": {"@type": {{if eq $.Platform.ID "hw"}}"Product"{{else}}"VideoGame", "gamePlatform": {{$.Platform.Label}}{{end}}, "name": {{$.Title}}},
+  "reviewRating": {"@type": "Rating", "ratingValue": {{printf "%d" $.Rating}}, "bestRating": 5}
+}
+</script>
 {{- end}}
 {{- end}}
 </head>
