@@ -31,6 +31,6 @@ Pick your favourite carrier pigeon:
 - Steam: [Grandma's Bakery](https://s.team/u/grandmasbakery) - the only cookies I will ever offer you. Feel free to add me.
 - Discord: lamer.go
 - Reddit: [CartPopTv](https://www.reddit.com/user/CartPopTv/)
-- E-mail: [cartpoptv.scuba110@passmail.com](mailto:cartpoptv.scuba110@passmail.com)
+- E-mail: [hello@cartpop.tv](mailto:hello@cartpop.tv)
 
 Instagram and YouTube are linked at the bottom of every page, and comments under the gameplay videos reach me too.
