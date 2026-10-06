@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>Xibalba 64 (Nintendo 64) - cartpop.tv</title>
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="styles/dot-matrix.css">
+<script>(function(r){var n=getComputedStyle(r).getPropertyValue("--intros").trim().split(/\s+/);if(n[0])r.dataset.intro=n[Math.floor(Math.random()*n.length)]})(document.documentElement)</script>
+<script src="site.js" defer></script>
+<meta name="description" content="A brand-new FPS for the Nintendo 64, made by a single developer and released on a real cartridge in 2026. Xibalba 64 runs smoothly and sounds great, but beneath its moody Mayan underworld lies a very simple shooter.">
+<link rel="canonical" href="https://cartpoptv.github.io/xibalba-64.html">
+<link rel="alternate" type="application/atom+xml" title="cartpop.tv" href="feed.xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="cartpop.tv">
+<meta property="og:title" content="Xibalba 64 (Nintendo 64) - cartpop.tv">
+<meta property="og:description" content="A brand-new FPS for the Nintendo 64, made by a single developer and released on a real cartridge in 2026. Xibalba 64 runs smoothly and sounds great, but beneath its moody Mayan underworld lies a very simple shooter.">
+<meta property="og:url" content="https://cartpoptv.github.io/xibalba-64.html">
+<meta property="og:image" content="https://cartpoptv.github.io/images-2026/n64-xibalba-64/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-10-01">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="giscus:backlink" content="https://cartpoptv.github.io/xibalba-64.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "url": "https://cartpoptv.github.io/xibalba-64.html",
+  "datePublished": "2026-10-01",
+  "author": {"@type": "Organization", "name": "cartpop.tv"},
+  "itemReviewed": {"@type": "VideoGame", "gamePlatform": "Nintendo 64", "name": "Xibalba 64"},
+  "reviewRating": {"@type": "Rating", "ratingValue": "3", "bestRating": 5}
+}
+</script>
+</head>
+
+<body class="page-review platform-n64">
+
+<a class="skip-link" href="#content">Skip to content</a>
+
+<header class="site-header">
+  <a class="site-logo" href="index.html">cartpop<span class="site-logo-tld">.tv</span></a>
+  <p class="site-tagline">Cartridge game reviews, without ads</p>
+  <nav class="site-nav" aria-label="Main">
+    <ul>
+      <li><a href="index.html">Reviews</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="content">
+<article class="review">
+
+  <header class="review-header">
+    <p class="review-labels">
+      <a class="label label-platform" href="label-nintendo-64.html">Nintendo 64</a>
+      <a class="label" href="label-cartridge.html">Cartridge</a>
+    </p>
+    <h1 class="review-title">Xibalba 64</h1>
+    <p class="review-standfirst">A brand-new FPS for the Nintendo 64, made by a single developer and released on a real cartridge in 2026. Xibalba 64 runs smoothly and sounds great, but beneath its moody Mayan underworld lies a very simple shooter.</p>
+    <p class="review-meta">
+      <time datetime="2026-10-01">1 October 2026</time>
+      <span class="review-meta-sep">·</span>
+      Reviewed on ModRetro M64 1.25.0
+    </p>
+  </header>
+
+<figure class="photo photo-hero">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/photo-01.avif" width="2000" height="1334" alt="Xibalba 64 box">
+<figcaption>The box, already unwrapped (I couldn't help myself).</figcaption>
+</figure>
+
+  <div class="review-body">
+<h2>How it came to be</h2>
+<p>Xibalba 64 is an expanded version of a 2014 browser game. Its author, Dominic Szablewski (PhobosLab), rewrote it from scratch in C on his own engine, and ModRetro released it physically at the end of July 2026 as one of the launch titles for the M64 console.</p>
+<p>It all started as an experiment: Szablewski ported his engine from JavaScript to C just to see what it would look like. The idea for an M64 version came later, and the full rebuild of the game began once ModRetro agreed to publish it.</p>
+<figure class="shots">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-01.webp" width="313" height="240" alt="Title screen">
+</figure>
+<p>In terms of mechanics and how it works under the hood, the game is very similar to Wolfenstein 3D. All the logic, movement and collisions happen internally in two dimensions, and the third dimension only comes in when the image is drawn. That is also why there is no vertical aiming: enemies are always on the same plane as the player.</p>
+<figure class="shots">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-18.webp" width="313" height="240" alt="Gameplay screenshot">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-14.webp" width="313" height="240" alt="Gameplay screenshot">
+</figure>
+<p>The difference is in the graphics. Wolfenstein 3D had no 3D geometry at all, it just cleverly drew vertical strips of wall. Xibalba 64 builds its world from real 3D triangles, with textured floors, ceilings and lighting. You still always move across a flat surface, though, with no stairs, no height differences and no jumping. It plays like Wolfenstein, but visually I'd say it is closer to Doom.</p>
+<figure class="shots">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-08.webp" width="313" height="240" alt="Gameplay screenshot">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-02.webp" width="313" height="240" alt="Gameplay screenshot">
+</figure>
+<h2>What's in the box</h2>
+<p>Unfortunately, the beautiful box doesn't hold anything special. Inside there is just the cartridge and a small manual with the basic information. With its Chromatic games (their Game Boy Color clone), ModRetro includes nice &quot;charms&quot;, little keychains on a string, but there are none here, and I suspect that will be the norm for M64 games.</p>
+<figure class="photo">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/photo-02.avif" width="2000" height="1333" alt="Manual">
+<figcaption>The game is simple enough that the manual is more of a nice extra than something that adds much to the experience.</figcaption>
+</figure>
+<figure class="photo">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/photo-05.avif" width="2000" height="1329" alt="Xibalba 64 cartridge">
+<figcaption>The cartridge itself, on the other hand, is very solidly built and looks great.</figcaption>
+</figure>
+<figure class="photo">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/photo-04.avif" width="2000" height="2000" alt="Opened cartridge">
+</figure>
+<p>Out of curiosity, I opened the cartridge. There is no classic ROM chip inside like in original Nintendo 64 cartridges. Instead, the heart of the board is a programmable FPGA from the Chinese company Gowin, a chip that can be &quot;configured&quot; to behave like a different chip. I suspect ModRetro uses the same board design for different games. The whole thing looks well made.</p>
+<h2>Playing it</h2>
+<p>In fairness, I should mention that I spent years playing QuakeWorld (Quake 1 multiplayer) intensively, and I have never got used to playing FPS games on a gamepad instead of a mouse. So I approached this game with a lot of scepticism.</p>
+<figure class="photo">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/photo-03.avif" width="2000" height="1333" alt="Cartridge in the M64 console">
+<figcaption>The game launched together with the ModRetro M64, so that's the console I played it on.</figcaption>
+</figure>
+<p>Even so, I enjoyed it quite a bit. It runs very smoothly, and the controls are intuitive. There are no complicated rules to learn, you just turn it on and shoot. At first I played with the M64 Pro Controller, but later I reached for the 8BitDo 64 Bluetooth Controller more often, because it's lighter and somehow more comfortable for me. Both work well, so it's a matter of personal preference.</p>
+<figure class="shots">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-04.webp" width="313" height="240" alt="Gameplay screenshot">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-05.webp" width="313" height="240" alt="Gameplay screenshot">
+</figure>
+<p>The game is stable, and I didn't run into any bugs or glitches. There are occasional reports online of freezes, including during the final boss fight. Nothing like that happened to me, although the final boss took me many attempts, mostly because it took me a long time to work out when he can actually be hurt.</p>
+<figure class="shots">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-03.webp" width="313" height="240" alt="Two-player split screen">
+</figure>
+<p>The game has four modes: Single Player, Co-op, Deathmatch and Infestation. In Infestation you have to survive as long as possible against waves of creatures coming out of various places. You can play it solo or with up to four players. My review covers the Single Player mode only.</p>
+<h2>The good and the bad</h2>
+<p>The sound design is good, and the intro features great music composed by Andreas Lösch. You can <a href="https://nofatenetmusic.bandcamp.com/album/xibalba64">listen to the whole soundtrack on Bandcamp</a>. The audio fits the game and does a good job of building its atmosphere.</p>
+<figure class="shots">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-11.webp" width="313" height="240" alt="Gameplay screenshot">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-12.webp" width="313" height="240" alt="Gameplay screenshot">
+</figure>
+<p>Visually the game is consistent and hard to fault, just plain. It's mostly corridors, with little decoration and hardly any places that make you want to stop and take a closer look. Because they all look alike and there is no map, I sometimes got lost and wandered around looking for the exit, which could get a bit tiring.</p>
+<figure class="shots">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-16.webp" width="313" height="240" alt="Gameplay screenshot">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-17.webp" width="313" height="240" alt="Gameplay screenshot">
+</figure>
+<p>There are few enemy types and just as few weapons, so after a couple of short sessions the game stops surprising you. You keep moving on, fighting the same monsters over and over or searching for the exit. Each monster attacks in its own way, but beyond that they don't do anything interesting: once they see you, they come straight at you.</p>
+<figure class="shots">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-09.webp" width="313" height="240" alt="Gameplay screenshot">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-10.webp" width="313" height="240" alt="Gameplay screenshot">
+</figure>
+<p>Judging by the screenshots, the colourful variety of the levels might suggest that something more is going on, like unusual mechanisms or something straight out of an RPG. Unfortunately, there is nothing like that here. You find the exit and blast the monsters along the way, and that's all.</p>
+<figure class="shots">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-06.webp" width="313" height="240" alt="Gameplay screenshot">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-07.webp" width="313" height="240" alt="Gameplay screenshot">
+</figure>
+<p>If you're looking for something mindless to unwind with after work, beer in hand, shooting some critters, this game is perfectly fine. You just sit down and play. It will last you several evenings: the single-player mode has 17 levels, and none of them took me more than an hour (I played on normal difficulty).</p>
+<figure class="shots">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-13.webp" width="313" height="240" alt="Gameplay screenshot">
+<img src="https://cartpoptv.github.io/images-2026/n64-xibalba-64/scr-15.webp" width="313" height="240" alt="Gameplay screenshot">
+</figure>
+<p>It isn't a title with a &quot;wow&quot; factor, though. You'll finish it and be satisfied, but a few years from now you probably won't even remember it.</p>
+<h2>Verdict</h2>
+<p>This game deserves Silver. It has no serious flaws, it's just shallow and lacks variety. A solid middle-of-the-road title, and I'm sure plenty of people will enjoy it.</p>
+<p>The developer deserves respect, because making a game alone and seeing it through to the end is no easy task. I'm also really glad that new games are still being made for retro consoles, so if money isn't tight, it's worth adding to your collection and supporting projects like this.</p>
+  </div>
+
+  <section class="verdict" aria-labelledby="verdict-title">
+    <h2 class="verdict-title" id="verdict-title">Verdict</h2>
+    <p class="rating" role="img" aria-label="Rating: 3 out of 5 (silver)" title="3 out of 5 (silver)"><img class="token" src="img/token-silver.png" width="16" height="16" alt=""><img class="token" src="img/token-silver.png" width="16" height="16" alt=""><img class="token" src="img/token-silver.png" width="16" height="16" alt=""></p>
+    <ul class="verdict-points">
+      <li class="pro">Runs smoothly and reliably</li>
+      <li class="pro">Good sound design and atmospheric music</li>
+      <li class="con">Few enemy types and weapons</li>
+      <li class="con">Repetitive, no interesting mechanics</li>
+      <li class="con">No map, easy to get lost</li>
+    </ul>
+  </section>
+
+  <div class="review-end">
+    <p class="video-link">
+      <a href="https://www.youtube.com/watch?v=aIe4eCJ810U">Watch gameplay on YouTube</a>
+      <span class="video-link-note">No-commentary video</span>
+    </p>
+    <a class="to-top" href="#top" aria-label="Back to top" title="Back to top"></a>
+  </div>
+
+</article>
+
+<section class="comments" aria-labelledby="comments-title">
+  <h2 id="comments-title">Comments</h2>
+  <div class="giscus"></div>
+  <script src="https://giscus.app/client.js"
+          data-repo="cartpoptv/cartpoptv.github.io"
+          data-repo-id="R_kgDOUgJfMg"
+          data-category="Comments"
+          data-category-id="DIC_kwDOUgJfMs4DGwQn"
+          data-mapping="pathname"
+          data-strict="1"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="https://cartpoptv.github.io/styles/giscus.css"
+          data-lang="en"
+          crossorigin="anonymous"
+          defer>
+  </script>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-panel">
+    <p class="site-footer-values">No ads, cookies, or trackers.</p>
+    <ul class="site-footer-links">
+      <li><a href="feed.xml">RSS</a></li>
+      <li><a href="https://www.instagram.com/cartpoptv/">Instagram</a></li>
+      <li><a href="https://www.youtube.com/@CartPopTV">YouTube</a></li>
+      <li><a href="https://github.com/cartpoptv">GitHub</a></li>
+    </ul>
+    <fieldset class="theme-switch" hidden>
+      <legend>Theme</legend>
+      <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+      <label><input type="radio" name="theme" value="auto" checked><span>Auto</span></label>
+      <label><input type="radio" name="theme" value="light"><span>Light</span></label>
+    </fieldset>
+  </div>
+  <p class="site-footer-address"><span class="site-footer-address-label">ROM backup</span> If the <span class="site-footer-domain">cartpop.tv</span> domain ever stops working, the site is still at <a href="https://cartpoptv.github.io/">cartpoptv.github.io</a>.</p>
+</footer>
+
+<dialog class="lightbox" id="lightbox"></dialog>
+
+</body>
+</html>
